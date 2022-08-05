@@ -1,0 +1,69 @@
+{
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "parser": "vue-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser"
+      },
+      "rules": {
+        "no-unused-vars": "off",
+        "no-undef": "off",
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "vue/setup-compiler-macros": true
+  },
+  "extends": ["eslint:recommended", "plugin:vue/vue3-recommended", "prettier", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "vue/max-attributes-per-line": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-multi-spaces": "error",
+    "vue/no-v-html": "off",
+    "vue/require-prop-types": "off",
+    "vue/require-default-prop": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/no-setup-props-destructure": "off",
+    "array-callback-return": "error",
+    "no-await-in-loop": "warn",
+    "no-duplicate-imports": "error",
+    "no-promise-executor-return": "warn",
+    "no-self-compare": "error",
+    "capitalized-comments": "error",
+    "arrow-body-style": ["error", "as-needed"],
+    "eqeqeq": ["error", "always"],
+    "no-alert": "error",
+    "dot-notation": "error",
+    "no-confusing-arrow": "warn",
+    "no-lonely-if": "error",
+    "prefer-const": "error",
+    "semi-style": ["error", "last"],
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "no-trailing-spaces": "error",
+    "no-tabs": "error",
+    "no-multiple-empty-lines": "error",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "vue/component-tags-order": [
+      "error",
+      {
+        "order": ["script", "template", "style"]
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": "*", "next": "function" },
+      { "blankLine": "always", "prev": "function", "next": "*" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
+    ]
+  }
+}
